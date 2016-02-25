@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/card_margin_bottom"
+    android:paddingLeft="@dimen/card_padding"
+    android:paddingRight="@dimen/card_padding">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="@dimen/card_corner_radius"
+        card_view:cardElevation="@dimen/card_elevation"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F8F8F8"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/name"
+                style="@style/TextStyle"
+                android:layout_width="@dimen/name_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/name_margin_bottom"
+                android:maxLines="3"
+                tools:text="Sainsbury's Avocado Ripe Ready XL Loose 300g"/>
+
+            <TextView
+                android:id="@+id/price"
+                style="@style/PriceTextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name"
+                android:layout_toLeftOf="@+id/price_measure"
+                android:layout_toStartOf="@+id/price_measure"
+                tools:text="£1.50/unit"/>
+
+            <TextView
+                android:id="@+id/price_measure"
+                style="@style/TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/price"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/price_margin_left"
+                tools:text="£1.50/ea"/>
+
+            <ImageView
+                android:id="@+id/main_image"
+                android:layout_width="@dimen/main_image_width"
+                android:layout_height="@dimen/main_image_height"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:scaleType="fitXY"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_launcher"/>
+
+            <ImageView
+                android:id="@+id/additional_image"
+                android:layout_width="@dimen/additional_image_size"
+                android:layout_height="@dimen/additional_image_size"
+                android:layout_alignBottom="@+id/main_image"
+                android:layout_marginRight="@dimen/additional_image_margin_right"
+                android:layout_toLeftOf="@+id/button"
+                android:scaleType="fitCenter"
+                tools:ignore="ContentDescription"
+                tools:src="@drawable/ic_launcher"/>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/main_image"
+                android:layout_alignEnd="@+id/price_measure"
+                android:layout_alignRight="@+id/price_measure"
+                android:background="@drawable/button_drawable"
+                android:clickable="true"
+                android:text="@string/button_text"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
