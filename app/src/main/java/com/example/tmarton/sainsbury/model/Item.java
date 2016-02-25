@@ -5,6 +5,7 @@ import lombok.Setter;
 
 /**
  * Created by Tamas Marton.
+ * SainsBury's Items model class
  */
 public class Item {
 
@@ -18,7 +19,15 @@ public class Item {
 
     @Getter
     @Setter
+    private String additionalImageUrl;
+
+    @Getter
+    @Setter
     private String price;
+
+    @Getter
+    @Setter
+    private String unit;
 
     @Getter
     @Setter
